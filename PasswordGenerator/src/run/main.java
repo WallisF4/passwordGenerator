@@ -95,7 +95,7 @@ public class main {
 		}
 		BufferedWriter writer=null;
 		try {
-			writer = new BufferedWriter(new FileWriter("C:\\Users\\walli\\Downloads\\hashcat-6.2.6\\hashcat-6.2.6\\output.txt"));
+			writer = new BufferedWriter(new FileWriter("output.txt"));
 			File f = new File("output.txt");
 			System.out.println(f.getAbsolutePath());
 		} catch (IOException e) {
