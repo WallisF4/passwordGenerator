@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class main {
 	public static void main(String[] args) {
+		boolean viaConsole=false;
 		ArrayList<String> passwords = new ArrayList<String>();
 		ArrayList<String> encrypted = new ArrayList<String>();
 		
@@ -27,14 +28,24 @@ public class main {
 		//33-47: special characters
 		String specialRange = "33-47";
 		
-		Scanner in = new Scanner(System.in);
-		System.out.println("How many characters?:");
-		int n = Integer.parseInt(in.nextLine());
-		System.out.println("How many passwords?:");
-		int m = Integer.parseInt(in.nextLine());
-		System.out.println("What character range? (full, upper, lower, number, special, upperLower, specialUpperLower, lowerNum, upperNum,upperLowerNum):");
-		String range = in.nextLine();
+		int m;
+		int n;
+		String range;
+		if(viaConsole) {
+			Scanner in = new Scanner(System.in);
+			System.out.println("How many characters?:");
+			n = Integer.parseInt(in.nextLine());
+			System.out.println("How many passwords?:");
+			m = Integer.parseInt(in.nextLine());
+			System.out.println("What character range? (full, upper, lower, number, special, upperLower, specialUpperLower, lowerNum, upperNum,upperLowerNum):");
+			range = in.nextLine();
+		}
 		
+		else {
+			n = Integer.parseInt(args[0]);
+			m = Integer.parseInt(args[1]);
+			range = args[2];
+		}
 		
 		for (int i = 0; i < m; i++) {
 			StringBuilder password = new StringBuilder();
