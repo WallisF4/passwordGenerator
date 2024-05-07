@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class main {
 	public static void main(String[] args) {
+		System.out.println("test");
 		boolean viaConsole=false;
 		ArrayList<String> passwords = new ArrayList<String>();
 		ArrayList<String> encrypted = new ArrayList<String>();
@@ -106,8 +107,8 @@ public class main {
 		}
 		BufferedWriter writer=null;
 		try {
-			writer = new BufferedWriter(new FileWriter("output.txt"));
-			File f = new File("output.txt");
+			writer = new BufferedWriter(new FileWriter("/Users/adamjonasson/labbar/utv-projekt/output.txt"));
+			File f = new File("/Users/adamjonasson/labbar/utv-projekt/output.txt");
 			System.out.println(f.getAbsolutePath());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
