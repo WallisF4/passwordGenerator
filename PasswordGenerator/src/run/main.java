@@ -11,7 +11,6 @@ import java.util.Scanner;
 
 public class main {
 	public static void main(String[] args) {
-		System.out.println("test");
 		boolean viaConsole=false;
 		ArrayList<String> passwords = new ArrayList<String>();
 		ArrayList<String> encrypted = new ArrayList<String>();
